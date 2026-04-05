@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Path IQ - Advanced Advertising Platform for Digital Marketing</title>
+    <meta name="description" content="Path IQ's cutting-edge advertising platform offers AI-powered campaign management, real-time analytics, and premium SSP integrations. Launch campaigns in 3 clicks." />
+    <meta name="keywords" content="advertising platform, digital advertising, programmatic advertising, AI campaigns, real-time bidding, ad tech" />
+    <meta name="author" content="Path IQ" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Path IQ - Advanced Advertising Platform" />
+    <meta property="og:description" content="AI-powered advertising platform with 3-click campaign setup, real-time analytics, and 90+ SSP integrations." />
+    <meta property="og:image" content="/pathiq-logo-new.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Path IQ" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Path IQ - Advanced Advertising Platform" />
+    <meta name="twitter:description" content="AI-powered advertising platform with 3-click campaign setup and real-time analytics." />
+    <meta name="twitter:image" content="/pathiq-logo-new.png" />
+    
+    <!-- Theme -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="canonical" href="https://path-iq.ai/" />
+    <script type="module" crossorigin src="/assets/index-C078KaXz.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DEIi6h-R.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      /**
+       * DO NOT REMOVE
+       * Sends client-side errors to the chariot-logger defined in vite.config.ts
+       */
+      if ("production" === "development") {
+        // Send to logger and notify parent
+        const sendError = (error) => {
+          if (!error?.message) return; // only log errors with a message
+
+          fetch("/@chariot-logger", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(error),
+          }).catch(() => {});
+          window.parent.postMessage("error", "*");
+        };
+
+        // Catch all errors
+        window.addEventListener("error", (e) => sendError(e), true);
+        window.addEventListener(
+          "unhandledrejection",
+          (e) => sendError(e),
+          true
+        );
+
+        // Catch console.error
+        const originalError = console.error;
+        console.error = function (...args) {
+          originalError.apply(console, args);
+          sendError({ type: "console", args });
+        };
+      }
+    </script>
+  </body>
+</html>

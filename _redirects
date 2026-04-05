@@ -1,0 +1,9 @@
+# Netlify redirects for React Router (SPA)
+# This ensures all routes are handled by the React app
+
+# Handle all routes by serving index.html
+/*    /index.html   200
+
+# Optional: Redirect common variations
+/home    /    301
+/index    /    301
